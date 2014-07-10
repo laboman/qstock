@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/qmobiili.css" />
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/map.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/iscroll.js"></script>
+        <title>Qstock</title>
+    </head>
+	<script src="js/jquery.js"></script>
+    <script src="js/banner.js"></script>
+    <body onload="start_banner()">
+        <div class="app">
+            <div id="mapscreen">
+                <div id="mapheader">
+                    <a href="main.html"><img src="img/badge-backlink.png"/></a>
+                </div>
+                 <div id="maparea" width:1000px; height:1000px>
+                   <img id="map-pos" src="img/map/Olet_tassa.png" style="z-index: 10; position:absolute; left:500px; top;500px; opacity:0.75" alt="">
+                   <img id="map-qstock" src="img/map/qstock.jpg" alt="">		
+                   <img id="map-festareille" src="img/map/festareille.png" alt="">		
+                   <img id="map-nallikariin" src="img/map/nallikariin.jpg" alt="">	
+                    <!-- img id="map-info" src="img/map_info.png" alt=""> -->	
+                </div>
+                <div id="map-info" >
+                <header>              
+                </header>
+                   <section id="maincontent-scroll">    
+                      <ul id="infolist" class="linklist upper">
+                         <li><img class="info-icons" src="img/icons/8_lipunmyynti.png" alt="">Lipunmyynti</li>
+                         <li><img class="info-icons" src="img/icons/9_rannekkeet.png" alt="">Rannekkeet</li>
+                         <li><img class="info-icons" src="img/icons/10_narikka.png" alt="">Narikka</li>
+                         <li><img class="info-icons" src="img/icons/11_info.png" alt="">Info</li>
+                         <li><img class="info-icons" src="img/icons/12_wc.png" alt="">Wc</li>
+                         <li><img class="info-icons" src="img/icons/13_ruokaa.png" alt="">Ruokaa</li>
+                         <li><img class="info-icons" src="img/icons/14_bandipaidat.png" alt="">Bändipaidat</li>
+                         <li><img class="info-icons" src="img/icons/15_kierratyspiste.png" alt="">Kierrätyspiste</li>
+                         <li><img class="info-icons" src="img/icons/16_puhelintenlatauspiste.png" alt="">Puhelintenlatauspiste</li>
+                         <li><img class="info-icons" src="img/icons/17_vesipiste.png" alt="">Vesipiste</li>
+                         <li><img class="info-icons" src="img/icons/18_ensiapu.png" alt="">Ensiapu</li>
+                         <li><img class="info-icons" src="img/icons/19_pyoratuolikoroke.png" alt="">Pyörätuolikoroke</li>
+                         <li><img class="info-icons" src="img/icons/20_saunalautta.png" alt="">Saunalautta</li>
+                         <li><img class="info-icons" src="img/icons/21_rannekkeidenvaihto.png" alt="">Rannekkeidenvaihto</li>
+                         <li><img class="info-icons" src="img/icons/22_pyoraparkki.png" alt="">Pyöräparkki</li>
+                         <li><img class="info-icons" src="img/icons/23_leirintaalue.png" alt="">Leirintäalue</li>
+                         <li><img class="info-icons" src="img/icons/24_lehdistokeskus.png" alt="">Lehdistökeskus</li>
+                         <li><img class="info-icons" src="img/icons/25_akkreditointi.png" alt="">Akkredointi</li>
+                         <li><img class="info-icons" src="img/icons/26_otto-automaatti.png" alt="">Otto-automaatti</li>
+                         <li><img class="info-icons" src="img/icons/27_paaportti.png" alt="">Pääportti</li>
+                         <li><img class="info-icons" src="img/icons/28_vip-portti.png" alt="">Vip-portti</li>
+                         <li><img class="info-icons" src="img/icons/29_anniskelualueet.png" alt="">Anniskelualueet</li>
+                         <li><img class="info-icons" src="img/icons/30_myyntialue.png" alt="">Myyntialue</li>
+                         <li><img class="info-icons" src="img/icons/31_festivaalialue.png" alt="">Festivaalialue</li>
+                         <li><img class="info-icons" src="img/icons/32_eteisalue.png" alt="">Eteisalue</li>
+                         <li><img class="info-icons" src="img/icons/33_vip-alue.png" alt="">Vip-alue</li>
+                        </ul>
+                      </section>
+                </div> <!-- map info -->
+                <div id="mapmenu">
+                    <a class="mapmenuitem" onclick="setMyPos()" href="#">Olet tässä</a>
+                    <a class="mapmenuitem" style="visibility:none" onclick="setMap('festari')" href="#">Alue</a>
+                    <a class="mapmenuitem" onclick="setMap('nallikariin')" href="#">Nallikariin</a>
+                    <a class="mapmenuitem" onclick="setMap('festareille')" href="#">Festareille</a>
+                    <a class="mapmenuitem" onclick="setMap('info')" href="#">Info</a>
+                </div>
+            </div>
+            <div id="banner" style="">
+            </div>
+        </div>
+        <script type="text/javascript">
+            map_init();
+            document.addEventListener('DOMContentLoaded', maploaded, false);
+        </script>
+    </body>
+</html>
