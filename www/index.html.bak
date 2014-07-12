@@ -36,7 +36,7 @@
                 <article id="maincontent">
                     <div id="deviceready">
                         <div class="blink event listening">
-                            <p>KÃ¤ynnistetÃ¤Ã¤n sovellusta</p>
+                            <p>Käynnistetään sovellusta</p>
                         </div>
                         <div class="event received">
                             <a href="main.html" class="badge ir" id="badge-qmobiili">Qmobiili</a>
