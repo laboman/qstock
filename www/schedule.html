@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/qmobiili.css" />
+        <link rel="stylesheet" type="text/css" href="css/schedule.css" />        
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/schedule.js"></script>
+        <script type="text/javascript" src="js/band.js"></script>
+        <script type="text/javascript" src="js/owncalendar.js"></script>
+        <script type="text/javascript" src="js/alerts.js"></script>
+        <title>Qstock</title>
+    </head>
+	<script src="js/jquery.js"></script>
+	<script src="js/data.js"></script>
+    <script src="js/banner.js"></script>
+    <body onload="start_banner()">
+        <div class="app">
+            <article id="maincontent">
+                <header>
+                    <a href="main.html" class="badge ir" id="badge-backlink">Takaisin</a>
+                        <div id="header-content" class="upper">
+                            <ul id="daynavi" class="linklist upper">
+                                <li id="anchor_now" class="current-menu-item">
+                                    <a href="#" onclick="schedule_selectday('now')">Nyt</a>
+                                </li>
+                                <li id="anchor_fri">
+					                <a href="#" onclick="schedule_selectday('friday')">Perjantai</a>
+                                </li>
+                                <li id="anchor_sat">
+					                <a href="#" onclick="schedule_selectday('saturday')">Lauantai</a>
+                                </li>
+                                 <li id="anchor_own">
+					               <a  href="owncalendar.html">Omat</a>
+                                </li>
+                                <li>
+					               <div class="alerts_off"><a href="#" onclick="setalerts_on()"><img src="img/alarm.png" alt="" /></a></div>
+                                   <div class="alerts_on" style="display:none"><a href="#" onclick="setalerts_off()"><img src="img/alarm-on.png" alt="" /></a></div>
+                                </li>
+				            </ul>
+			             </div>
+                </header>
+                <section id="timetable-scroll">
+                    <div id="stagenames" class="upper">
+                        <div class="stagename main">Päälava</div>
+                        <div class="stagename kaleva">Kaleva-lava</div>
+                        <div class="stagename kooma">Kooma-lava</div>						
+                        <div class="stagename beat">Rytmi-ranta</div>
+                        <div class="stagename circus">Sirkus-teltta</div>
+                        <div class="stagename oulu">Oulu-lava</div>
+                    </div>
+<!--                    <div id="timetable-scrollcontent" style="margin-left: -270px;">-->
+                    <div id="timetable-scrollarea">
+                        <div id="timetable-scrollcontent">
+                            <ul id="hourlist" class="linklist">
+                                <li>12:00</li>
+                                <li>13:00</li>
+                                <li>14:00</li>
+                                <li>15:00</li>
+                                <li>16:00</li>
+                                <li>17:00</li>
+                                <li>18:00</li>
+                                <li>19:00</li>
+                                <li>20:00</li>
+                                <li>21:00</li>
+                                <li>22:00</li>
+                                <li>23:00</li>
+                                <li>00:00</li>
+                            </ul>
+                            <div class="stagetimetable paalava">
+                            </div>
+                            <div class="stagetimetable kaleva-lava">
+                            </div>
+                            <div class="stagetimetable koomalava">
+                            </div>
+                            <div class="stagetimetable rytmiranta">
+                            </div>
+                            <div class="stagetimetable sirkusteltta">
+                            </div>
+                            <div class="stagetimetable oulu-lava">
+                            </div>
+                            <div class="now_indicator" style="position: absolute; top: 0px; left: 0px; background:#000; opacity:0.25; width:300px; height:400px; z-index:700;">
+                            </div>
+                        </div>
+                    </div>
+				</section>
+                <div>
+                    <ul id="artistlist" class="linklist upper mainmenu">
+				        <li class="mainmenu_item"><a  href="owncalendar.html">Oma kalenteri</a></li>
+                    </ul>
+                </div>
+            </article>
+            <div id="banner" style="">
+            </div>
+        </div>
+        <script type="text/javascript">
+            schedule_init();
+        </script>
+    </body>
+</html>
