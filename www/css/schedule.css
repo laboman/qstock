@@ -1,0 +1,453 @@
+/******** AIKATAULU TYYLIT ******************/
+#schedule-wrap {    overflow:hidden; width:900px;float:left; }
+#schedule {    overflow:hidden;float:left; }
+#timeCol { width:50px;min-height:922px;float:left; }
+.timeHead-day {    text-align:center;  height:140px; }
+.timeHead {    text-align:center;height:140px;width:140px; }
+
+#timelineColumn {    width:50px;overflow:hidden; text-align:center; color:#000000; font-weight:bold;}
+.dayCol {   width:140px;height:922px;float:left;position:relative;  }
+.dayCol-sat {   width:140px;min-height:1242px;float:left;position:relative; }
+.schedule-content { min-height:1120px; width:140px;height:620px; position:relative; background:url(images/stripes.png) repeat-y;  }
+
+
+
+.timeHead h3 {
+    font-size: 2.1em;
+    font-weight: normal;
+    color:#00596B!important;
+       margin: 0;
+    padding: 10px 0;
+}
+
+
+
+.timeslot{
+ 
+    font-size: 11px;
+    height: 40px;
+    margin: 0;
+    padding: 5px 0 0;
+    width: 50px;
+
+}
+
+.timeslot.even{
+background:#d6c49f;
+}
+
+.band-slot, .band-slot-dj{
+     border-radius: 4px;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 0 8px;
+    width: 98%;
+    position:absolute;
+  
+
+}
+
+.band-slot.dur-15{
+ height:20px;
+}
+
+.band-slot.dur-15 .band-title{
+ padding:4px 0 0 0!important;
+}
+
+
+.band-slot.dur-15 .showtime{
+ float:right!important;
+ margin:0!important;
+}
+
+.band-slot-dj.dur-30{
+ height:40px;
+}
+
+.band-slot.dur-45{
+ height:60px;
+}
+
+.band-slot.dur-50{
+ height:70px;
+}
+
+
+.band-slot.dur-60{
+ height:80px;
+}
+
+.band-slot.dur-75{
+ height:100px;
+}
+
+.band-slot.dur-90{
+ height:120px;
+}
+
+.band-slot.paalava {
+background:#e52977 url("images/aikataulu-bg.png");
+
+}
+.band-slot.kaleva-lava {
+background:#f0bc00 url("images/aikataulu-bg.png");
+
+}
+.band-slot.koomalava {
+background:#5cc5ed url("images/aikataulu-bg.png");
+
+}
+.band-slot.oulu-lava {
+background:#ec78a9 url("images/aikataulu-bg.png");
+
+}
+.band-slot.sirkusteltta {
+background:#0081c2 url("images/aikataulu-bg.png");
+
+}
+
+.band-slot.rytmiranta {
+background:#e6441f url("images/aikataulu-bg.png");
+
+}
+.band-slot-dj.rytmiranta {
+background:transparent;
+
+}
+
+.band-title {
+
+/* font-family: "Amatic SC",Helvetica,Arial,sans-serif;
+ font-size: 21px;
+    line-height: 20px;
+    margin: 0;
+    overflow: hidden;
+    padding: 4px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform:uppercase; */
+    font-size: 12px;
+    line-height: 13px;
+    margin: 0;
+    overflow: hidden;
+    padding: 7px 0 0;
+    text-transform: uppercase;
+    font-weight:bold;
+
+}
+.band-title a{
+color:#ffffff!important;
+text-decoration:none;
+
+}
+.band-title a:hover{
+background:none!important;
+text-decoration:underline;
+
+}
+
+
+
+.showtime{
+ color: #000000;
+ font-size: 11px;
+ font-weight: bold;
+  margin: 0px 0 0;
+
+}
+
+.t1600 {
+top:0px;
+}
+.t1630 {
+
+top:40px;
+
+}
+.t1700, .t1705 {
+  top:80px;
+}
+
+.t1730 {
+  top:100px;
+}
+
+
+.t1800 {
+  top:160px;
+}
+.t1830 {
+  top:200px;
+}
+.t1900 {
+  top:240px;
+}
+.t1930 {
+  top:280px;
+}
+.t2000 {
+  top:320px;
+}
+.t2030 {
+  top:360px;
+}
+.t2100 {
+  top:400px;
+}
+.t2130 {
+  top:440px;
+}
+.t2200 {
+  top:480px;
+}
+.t2230 {
+  top:520px;
+}
+.t2300 {
+  top:560px;
+}
+
+.t2330 {
+  top:600px;
+}
+
+.t0000 {
+  top:640px;
+}
+.t0030 {
+  top:680px;
+}
+
+/** SHOWTIME SAT **/
+
+.t-sat1200{
+top:0;
+}
+
+.t-sat1300, .t-sat1305{
+top:80px;
+}
+
+.t-sat1400{
+top:160px;
+}
+
+
+.t-sat1500, .t-sat1505{
+top:240px;
+}
+
+
+.t-sat1600{
+top:320px;
+}
+.t-sat1630{
+top:360px;
+}
+.t-sat1700{
+top:400px;
+}
+.t-sat1730{
+top:440px;
+}
+
+.t-sat1800{
+top:480px;
+}
+
+.t-sat1830{
+top:520px;
+}
+
+
+.t-sat1900, .t-sat1905{
+top:560px;
+}
+
+.t-sat1930{
+top:600px;
+}
+.t-sat2000{
+top:640px;
+}
+.t-sat2030{
+top:680px;
+}
+.t-sat2100{
+top:720px;
+}
+
+
+.t-sat2130{
+top:760px;
+}
+.t-sat2200{
+top:800px;
+}
+
+.t-sat2215{
+top:820px;
+}
+
+.t-sat2230{
+top:840px;
+}
+
+.t-sat2300{
+top:880px;
+}
+
+.t-sat2315{
+top:900px;
+}
+
+.t-sat2330{
+top:920px;
+}
+
+.t-sat2345{
+top:940px;
+}
+
+.t-sat0000{
+top:960px;
+}
+
+.t-sat0030{
+top:1000px;
+}
+
+.t-sat0040{
+top:1015px;
+}
+
+.t-sat0100{
+top:1040px;
+}
+
+.t-sat0130{
+top:1080px;
+}
+
+.day-name{
+display:none;
+
+}
+
+#program-sidebar{
+display:block;
+width:15%;
+float:right;
+}
+
+#program-sidebar .sidebar {
+    width: 100%;
+}
+/*********************************************/
+
+@media
+only screen and (max-width: 1024px) {
+    
+/* AIKATAULU */
+
+#timeCol{
+  display:none;
+}
+
+.timeHead {
+width:100%;
+border:0;
+}
+
+.dayCol, .dayCol-sat{
+  width:100%;
+  border-bottom:0;
+ border-right:0;
+ height:auto;
+ min-height: 0;
+}
+
+.schedule-content {
+    width:100%;
+    height:auto;
+    background:none;
+     min-height: 0;
+}
+
+
+.band-slot.dur-15, .band-slot.dur-45, .band-slot.dur-50, .band-slot.dur-60, .band-slot.dur-75, .band-slot.dur-90 {
+ height:60px;
+}
+
+.band-slot, .band-slot-dj{
+ border-radius: 2px;
+    font-size: 12px;
+    margin: 0 auto 8px auto;
+    padding: 0 8px;
+    position: relative;
+    width: 100%;
+    top: 0!important;
+
+}
+
+.band-slot.dur-15 .showtime {
+    float: none!important;
+  margin: 4px 0 0!important;
+}
+
+.day-name{
+background: none repeat scroll 0 0 #FF0000;
+    color: #FFFFFF;
+    display: block;
+    font-family: "Amatic SC",Helvetica,Arial,sans-serif !important;
+    font-size: 28px;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background: #5CC5ED
+}
+.band-title{
+  font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+    padding: 6px 0 0;
+    text-transform: uppercase;
+}
+
+.showtime{
+
+font-size:12px;
+}
+
+
+
+#schedule-wrap {width:100%}
+#program-sidebar{display:none;}  
+
+}
+
+.content-text{
+    float: left;
+    margin: 0 0 35px;
+    width: 100%;
+
+}
+
+
+@media
+only screen and (max-width: 480px) {
+    
+ 
+	.header .logo { 
+	 display:none;
+	
+	 }
+	 .back-to-top{
+	    display:none!important;
+	  }
+
+
+}
