@@ -105,11 +105,11 @@ function schedule_init() {
         
     $.each(qstock_get_bands(), function (i, band) {
         if (isStarred(band.url)) {
-            starred_img = '<img id="img_starred_' + band.url + '" src="img/icon-starred.png" onclick="starred_click(' + "'" + band.url + "'" + ')"</img>';
-            unstarred_img = '<img id="img_unstarred_' + band.url + '" src="img/icon-unstarred.png" onclick="unstarred_click(' + "'" + band.url + "'" + ')" style="display:none"</img>';
+            starred_img = '<img id="img_starred_' + band.url + '" src="img/icon-starred.png" onclick="starred_click(' + "'" + band.url + "'" + ')">';
+            unstarred_img = '<img id="img_unstarred_' + band.url + '" src="img/icon-unstarred.png" onclick="unstarred_click(' + "'" + band.url + "'" + ')" style="display:none">';
         } else {
-            starred_img = '<img id="img_starred_' + band.url + '" src="img/icon-starred.png" onclick="starred_click(' + "'" + band.url + "'" + ')" style="display:none"</img>';
-            unstarred_img = '<img id="img_unstarred_' + band.url + '" src="img/icon-unstarred.png" onclick="unstarred_click(' + "'" + band.url + "'" + ')"</img>';
+            starred_img = '<img id="img_starred_' + band.url + '" src="img/icon-starred.png" onclick="starred_click(' + "'" + band.url + "'" + ')" style="display:none">';
+            unstarred_img = '<img id="img_unstarred_' + band.url + '" src="img/icon-unstarred.png" onclick="unstarred_click(' + "'" + band.url + "'" + ')">';
         }
         // friday has format "t1700" and saturday "t-sat1700";
         if (band.start.length < 6) {
@@ -147,7 +147,11 @@ function schedule_init() {
         bandhtml = bandhtml + '<div class="artist" style="absolute; left: ' + (band_float * 153) + 'px; width: ' + (duration * 153) + 'px;">';
         bandhtml = bandhtml + '<div id="band_schedule">';
         bandhtml = bandhtml + '<h1 class="' + class_str + '">' + band.title + '</h1>';
-        bandhtml = bandhtml + '<p>' + band_h + ':' + band_min + '&rarr;' + band_e_h + ':' + band_e_min + '</p>';
+        if (duration > 0.30 ) {
+            bandhtml = bandhtml + '<p>' + band_h + ':' + band_min + '&rarr;' + band_e_h + ':' + band_e_min + '</p>';
+        } else {
+            bandhtml = bandhtml + '<p>' + band_h + ':' + band_min + '</p>';
+        }
         bandhtml = bandhtml + '</div>';
         bandhtml = bandhtml + '</div>';
         bandhtml = bandhtml + '</div></a>';

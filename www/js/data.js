@@ -2,15 +2,11 @@
 
 function qstock_update_data() {
     "use strict";
-//    jQuery.get("http://www.uleaborg.com/qmobi/bands.json", function (data) {
     jQuery.get("http://www.pepron.com/dev/qstock/bands.json", function (data) {
-        console.log("update from pepron");
-        if (typeof data === 'object') {
-            window.localStorage.setItem("bands", JSON.stringify(data));
-            console.log("tuli objektina");
-        } else {
-            window.localStorage.setItem("bands", (data));
-            console.log("tuli stringinä");
+    	if (typeof data === 'object') {
+        	window.localStorage.setItem("bands", JSON.stringify(data));    	
+    	} else {
+        	window.localStorage.setItem("bands", (data));
         }
     });
 }
@@ -18,34 +14,30 @@ function qstock_update_data() {
 function qstock_data_init() {
     "use strict";
 
+    window.localStorage.removeItem("bands");
+    
     if (window.localStorage.getItem("bands") === null) {
         jQuery.get("data/bands.json", function (data) {
-            console.log("update from file");
             if (typeof data === 'object') {
-                window.localStorage.setItem("bands", JSON.stringify(data));
-                console.log("tuli objektina");
-            } else {
-                window.localStorage.setItem("bands", (data));
-                console.log("tuli stringinä");
+        	   window.localStorage.setItem("bands", JSON.stringify(data));    	
+    	    } else {
+        	   window.localStorage.setItem("bands", (data));
             }
+            qstock_update_data();
         });
+    } else {
+        qstock_update_data();
     }
-    qstock_update_data();
 }
 
 function qstock_get_bands() {
     "use strict";
-    var bands, band_source;
+    var bands;
     bands = [];
     if (window.localStorage.getItem("bands") === null) {
         qstock_data_init();
     } else {
-        band_source = window.localStorage.getItem("bands");
-        if (typeof band_source === 'object') {
-            return band_source;
-        } else {
-            bands = JSON.parse(band_source);
-        }
+        bands = JSON.parse(window.localStorage.getItem("bands"));
         return bands;
     }
     return bands;

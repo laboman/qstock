@@ -42,10 +42,7 @@ function band_init() {
     
     $.each(qstock_get_bands(), function (i, band) {
         if ((band.url === url) && (count === 0)) {
-            $("#header-content").append("<h1>" + band.title + "</h1>");
-
-            console.log(band.start);
-
+            $("#header-content").append("<h1 class='band-title'>" + band.title + "</h1>");
             band_date = "Perjantai";
             if (band.date === "sat") {
                 bandstart = band.start.substr(5);

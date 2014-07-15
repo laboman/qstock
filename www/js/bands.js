@@ -47,14 +47,12 @@ function bands_init() {
     "use strict";
     var class_str, bands_inserted, starred_img, unstarred_img, bands, title_tocomp;
     
-    qstock_data_init();
-    
     $("#artistlist").empty();
     bands_inserted = [];
-    console.log("GET BANDS");
+    //console.log("GET BANDS");
     bands = qstock_get_bands();
-    console.log(bands);
-    console.log("AFTER");
+    //console.log(bands);
+    //console.log("AFTER");
     bands.sort(function (a, b) {
         return a.title.localeCompare(b.title);
     });
