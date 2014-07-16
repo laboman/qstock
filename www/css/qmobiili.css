@@ -214,6 +214,10 @@ a:visited:hover {
 	color: #ec2882;
 }
 
+a img {
+    border: 0;
+}
+
 
 .linklist {
 	padding: 0;
@@ -480,7 +484,7 @@ ul ol {
 
 #band-content p {
     color: #000000;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 26px;
@@ -719,7 +723,7 @@ ul ol {
 	line-height: 1;
 	overflow: hidden;
 	text-overflow: ellipsis;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', Arial, sans-serif;
     width:79%;
     height:16px;
     text-transform: uppercase;

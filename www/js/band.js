@@ -51,7 +51,7 @@ function band_init() {
                 bandstart = band.start.substr(1);
             }
 
-            console.log(bandstart);
+            //console.log(bandstart);
             if (bandstart.length === 3) {
                 bandstart = bandstart.substr(0, 1) + ":" + bandstart.substr(1, 2);
             } else if (bandstart.length === 4) {
