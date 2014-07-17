@@ -135,7 +135,7 @@ function insertbands() {
 
 function owncalendar_init() {
     "use strict";
-    openFB.init('739780062745072'); // Defaults to sessionStorage for storing the Facebook token
+    //openFB.init('739780062745072'); // Defaults to sessionStorage for storing the Facebook token
     insertbands();
     if (alerts_on()) {
         $(".alerts_off").hide();
@@ -144,13 +144,13 @@ function owncalendar_init() {
         $(".alerts_off").show();
         $(".alerts_on").hide();
     }
-    if (localStorage.getItem(FB_ID) === null) {
+/*    if (localStorage.getItem(FB_ID) === null) {
         $(".fb_out").show();
         $(".fb_in").hide();
     } else {
         $(".fb_out").hide();
         $(".fb_in").show();
-    }
+    }*/
 }
 
 function stars_updated() {
