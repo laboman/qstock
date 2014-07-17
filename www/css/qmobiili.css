@@ -859,9 +859,9 @@ h1.band-title {
    
 }
 
-a{
-    color:#ec2882;
-
+a,
+a:visited {
+	color: #ec2882;
 }
 
 #artistlist a, #timetable-scrollcontent a{
