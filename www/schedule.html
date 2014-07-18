@@ -19,7 +19,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/data.js"></script>
     <script src="js/banner.js"></script>
-    <body onload="start_banner()">
+    <body onLoad="start_banner()">
         <div class="app">
             <article id="maincontent">
                 <header>
@@ -27,20 +27,20 @@
                         <div id="header-content" class="upper">
                             <ul id="daynavi" class="linklist upper">
                                 <li id="anchor_now" class="current-menu-item">
-                                    <a href="#" onclick="schedule_selectday('now')">Nyt</a>
+                                    <a href="#" onClick="schedule_selectday('now')">Nyt</a>
                                 </li>
                                 <li id="anchor_fri">
-					                <a href="#" onclick="schedule_selectday('friday')">Perjantai</a>
+					                <a href="#" onClick="schedule_selectday('friday')">Perjantai</a>
                                 </li>
                                 <li id="anchor_sat">
-					                <a href="#" onclick="schedule_selectday('saturday')">Lauantai</a>
+					                <a href="#" onClick="schedule_selectday('saturday')">Lauantai</a>
                                 </li>
                                  <li id="anchor_own">
 					               <a  href="owncalendar.html">Omat</a>
                                 </li>
                                 <li>
-					               <div class="alerts_off"><a href="#" onclick="setalerts_on()"><img src="img/alarm.png" alt="" /></a></div>
-                                   <div class="alerts_on" style="display:none"><a href="#" onclick="setalerts_off()"><img src="img/alarm-on.png" alt="" /></a></div>
+					               <div class="alerts_off"><a href="#" onClick="setalerts_on()"><img src="img/alarm.png" alt="" /></a></div>
+                                   <div class="alerts_on" style="display:none"><a href="#" onClick="setalerts_off()"><img src="img/alarm-on.png" alt="" /></a></div>
                                 </li>
 				            </ul>
 			             </div>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="stagetimetable oulu-lava">
                             </div>
-                            <div class="now_indicator" style="position: absolute; top: 0px; left: 0px; background:#000; opacity:0.25; width:300px; height:400px; z-index:700;">
+                            <div class="now_indicator" style="position: absolute; top: 0; left: 0; background: #000; opacity: 0.25; width: 300px; height: 100%; z-index: 700;">
                             </div>
                         </div>
                     </div>
