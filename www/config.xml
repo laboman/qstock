@@ -72,6 +72,12 @@
     <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
 
+    <platform name="wp8">
+              <icon src="res/wp/ApplicationIcon.png" width="99" height="99" />
+              <!-- tile image -->
+              <icon src="res/wp/Background.png" width="159" height="159" />
+     </platform>
+    
     <!-- Define app splash screen for each platform. -->
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
