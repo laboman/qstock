@@ -49,13 +49,15 @@ function bands_init() {
     
     $("#artistlist").empty();
     bands_inserted = [];
-    //console.log("GET BANDS");
+
     bands = qstock_get_bands();
-    //console.log(bands);
-    //console.log("AFTER");
+
     bands.sort(function (a, b) {
         return a.title.localeCompare(b.title);
     });
+    
+    var count = 0;
+    
     $.each(bands, function (i, band) {
         if (bands_inserted.indexOf(band.url) === -1) {
             if (isStarred(band.url)) {
@@ -72,6 +74,11 @@ function bands_init() {
             }
             $("#artistlist").append('<li class="' + class_str + '" id="bands_li">' + unstarred_img + starred_img + '<a class="band_item" href="band.html?src=bands&url=' + band.url + '">' + band.title + '</a></li>');
             bands_inserted.push(band.url);
+            if (count === 0) {
+                alert('<li class="' + class_str + '" id="bands_li">' + unstarred_img + starred_img + '<a class="band_item" href="band.html?src=bands&url=' + band.url + '">' + band.title + '</a></li>');   
+            }
+            count = count + 1;
+            
         }
     });
     if (window.localStorage.getItem("bands_day") !== null) {

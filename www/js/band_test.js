@@ -35,11 +35,18 @@ function band_init() {
 
     $("#artistlist").empty();
 
-    url = getParameterByName("url");
-    src = getParameterByName("src");
+    // HACK
+    alert("INIT TEST");
+    src = "bands";
+    url = "erin";
+    // HACK    
+//     url = getParameterByName("url");
+//    src = getParameterByName("src");
+    
     
     $("#badge-backlink").attr("href", src + ".html");
     
+
     count = 0;
     
     $.each(qstock_get_bands(), function (i, band) {

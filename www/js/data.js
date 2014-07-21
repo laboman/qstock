@@ -14,12 +14,13 @@ function qstock_update_data() {
 function qstock_data_init() {
     "use strict";
 
-    window.localStorage.removeItem("bands");
+    // IN BROWSER LOAD PAGE ONES TO FORCE UPLOAD BY UNCOMMENTING FOLLOWING LINE, AFTER THAT PLACE BACK TO COMMENTS
+    // window.localStorage.removeItem("bands");
     
     if (window.localStorage.getItem("bands") === null) {
         jQuery.get("data/bands.json", function (data) {
             if (typeof data === 'object') {
-        	   window.localStorage.setItem("bands", JSON.stringify(data));    	
+        	   window.localStorage.setItem("bands", JSON.stringify(data));    
     	    } else {
         	   window.localStorage.setItem("bands", (data));
             }
