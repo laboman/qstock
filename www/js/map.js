@@ -15,14 +15,6 @@ var festareille_coords = { top_lat : 65.02260126, top_lon : 25.45425279,
 var nallikariin_coords = { top_lat : 65.03345872, top_lon : 25.40617949,
                      bot_lat : 65.01135335, bot_lon : 25.47234598 };
 
-function getParameterByName(name) {
-    "use strict";
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
     "use strict";
     var R, dLat, dLon, a, c, d;
@@ -227,8 +219,9 @@ function maploaded() {
 }
 
 function setMiddle() {
+    "use strict";
     $("#maparea").scrollLeft(350);
-    $("#maparea").scrollTop(350);   
+    $("#maparea").scrollTop(350);
 }
 
 function map_init() {

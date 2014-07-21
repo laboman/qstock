@@ -14,6 +14,7 @@
     <script src="js/data.js"></script>
     <script src="js/banner.js"></script>
     <script src="js/band.js"></script>
+    <script src="js/schedule.js"></script>
     <script src="js/alerts.js"></script>
         <title>Qstock</title>
     </head>
@@ -25,13 +26,13 @@
                     <div id="header-content" class="upper">
                         <ul id="daynavi" class="linklist upper">
                                 <li id="anchor_now">
-                                    <a href="schedule.html?day=now">Nyt</a>
+                                    <a href="#" onclick="open_scheduleday('now')">Nyt</a>
                                 </li>
                                 <li id="anchor_fri">
-					                <a href="schedule.html?day=friday">Perjantai</a>
+                                    <a href="#" onclick="open_scheduleday('friday')">Perjantai</a>
                                 </li>
                                 <li id="anchor_sat">
-					                <a href="schedule.html?day=saturday">Lauantai</a>
+                                    <a href="#" onclick="open_scheduleday('saturday')">Lauantai</a>
                                 </li>
                                  <li id="anchor_own" class="current-menu-item">
 					               <a  href="owncalendar.html">Omat</a>

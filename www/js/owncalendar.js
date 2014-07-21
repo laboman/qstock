@@ -112,14 +112,14 @@ function insertbands() {
         if (isStarred(band.url)) {
             start = band.start.substr(band.start.length - 4, 4);
             start = start.substr(0, 2) + ":" + start.substr(2, 2);
-            venue=band.venue;
-            if(venue==='paalava'){
-                venue='Päälava';
+            venue = band.venue;
+            if (venue === 'paalava') {
+                venue = 'Päälava';
             }
             if (band.date === "fri") {
-                $("#artistlist_fri").append('<li><a class="starred" href="band.html?src=owncalendar&url=' + band.url + '">' + start + " " + venue + " " + band.title + '</a></li>');
+                $("#artistlist_fri").append('<li><a class="starred" onclick="open_band(' + "'owncalendar','" + band.url + "'" + ')">' + start + " " + venue + " " + band.title + '</a></li>');
             } else {
-                $("#artistlist_sat").append('<li><a class="starred" href="band.html?src=owncalendar&url=' + band.url + '">' + start + " " + venue + " " + band.title + '</a></li>');
+                $("#artistlist_sat").append('<li><a class="starred" onclick="open_band(' + "'owncalendar','" + band.url + "'" + ')">' + start + " " + venue + " " + band.title + '</a></li>');
             }
             bands_inserted.push(band.url);
         }

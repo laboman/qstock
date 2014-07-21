@@ -1,4 +1,4 @@
-/*global console,jQuery,$,isStarred, getParameterByName, qstock_get_bands, alerts_on, alert*/
+/*global console,jQuery,$,isStarred, qstock_get_bands, alerts_on, alert, switchstarred*/
 
 function getIndicatorWidth(timenow) {
     "use strict";
@@ -18,6 +18,7 @@ function getIndicatorWidth(timenow) {
 function schedule_selectday(selection) {
     "use strict";
     var timenow, fri_start, fri_end, sat_end, pos;
+    window.localStorage.setItem("schedule_day", selection);
     if (selection === "friday") {
         $("#anchor_now").removeClass('current-menu-item');
         $("#anchor_fri").addClass('current-menu-item');
@@ -84,15 +85,21 @@ function scrollHandler(a) {
 function starred_click(url) {
     "use strict";
     switchstarred(url);
-    $("#img_starred_"+url).hide();
-    $("#img_unstarred_"+url).show();
+    $("#img_starred_" + url).hide();
+    $("#img_unstarred_" + url).show();
 }
 
 function unstarred_click(url) {
     "use strict";
     switchstarred(url);
-    $("#img_starred_"+url).show();
-    $("#img_unstarred_"+url).hide();
+    $("#img_starred_" + url).show();
+    $("#img_unstarred_" + url).hide();
+}
+
+function open_scheduleday(day) {
+    "use strict";
+    window.localStorage.setItem("schedule_day", day);
+    window.location = "schedule.html";
 }
 
 function schedule_init() {
@@ -100,7 +107,8 @@ function schedule_init() {
     var class_str, class_str_ref, bandhtml, bandstart, band_float, band_h, band_min, band_e_h, band_e_min, duration, style_str, day, starred_img, unstarred_img;
     $("#artistlist").empty();
     
-    day = getParameterByName("day");
+    day = window.localStorage.getItem("schedule_day");
+
     schedule_selectday(day);
         
     $.each(qstock_get_bands(), function (i, band) {
@@ -143,7 +151,7 @@ function schedule_init() {
 
         bandhtml = '<div class="schedule_w">';
         bandhtml = bandhtml + '<div class="schedule_d">';
-        bandhtml = bandhtml + '<a href="band.html?src=schedule&url=' + band.url + '" class="' + class_str_ref + '" style="' + style_str + '">';
+        bandhtml = bandhtml + '<a href="#" onclick="open_band(' + "'schedule','" + band.url + "'" + ')" class="' + class_str_ref + '" style="' + style_str + '">';
         bandhtml = bandhtml + '<div class="artist" style="absolute; left: ' + (band_float * 153) + 'px; width: ' + (duration * 153) + 'px;">';
         bandhtml = bandhtml + '<div id="band_schedule">';
         bandhtml = bandhtml + '<h1 class="' + class_str + '">' + band.title + '</h1>';

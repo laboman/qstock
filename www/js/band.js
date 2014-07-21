@@ -1,10 +1,9 @@
 /*global console,jQuery,$,alert, qstock_get_bands*/
-function getParameterByName(name) {
+function open_band(backurl, band) {
     "use strict";
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    window.localStorage.setItem("band_url", band);
+    window.localStorage.setItem("band_src", backurl);
+    window.location = "band.html";
 }
 
 function isStarred(url) {
@@ -35,8 +34,8 @@ function band_init() {
 
     $("#artistlist").empty();
 
-    url = getParameterByName("url");
-    src = getParameterByName("src");
+    url = window.localStorage.getItem("band_url");
+    src = window.localStorage.getItem("band_src");
     
     $("#badge-backlink").attr("href", src + ".html");
     
