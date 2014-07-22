@@ -52,6 +52,8 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
     
+        StatusBar.hide();
+        
         qstock_data_init();
     },
     callAnothePage : function (pagetocall) {
