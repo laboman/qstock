@@ -802,6 +802,14 @@ h1.band-title {
 	padding-bottom: 2px;
 }
 
+
+#infolist li p{
+	font-family:'Open Sans', sans-serif; 
+    font-size:12px; 
+    font-weight:normal; 
+    text-transform:none;
+}
+
 #infolist li+li {
 	border-top: 1px dotted #d6af78;
 	padding: 2px 0;
@@ -998,6 +1006,5 @@ img#item_starred {
 
 
 */
-
 
 
